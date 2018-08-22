@@ -1,0 +1,1 @@
+A simple Hello World Python app deplyed through AWS
