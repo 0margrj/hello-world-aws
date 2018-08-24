@@ -1,7 +1,7 @@
 version: 0.2
 
 phases:
-  pre-build:
+  pre_build:
     commands:
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --no-include-email --region eu-west-1)
@@ -11,7 +11,7 @@ phases:
       - echo Building the docker image...
       - docker build -t 0margrj-apps .
       - docker tag 0margrj-apps:latest 019562922826.dkr.ecr.eu-west-1.amazonaws.com/0margrj-apps:latest
-  post-build:
+  post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
