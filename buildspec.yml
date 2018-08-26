@@ -9,10 +9,10 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the docker image...
-      - docker build -t 0margrj-apps/flask-hello-world .
-      - docker tag 0margrj-apps/flask-hello-world:latest 019562922826.dkr.ecr.eu-west-1.amazonaws.com/0margrj-apps/flask-hello-world:latest
+      - docker build -t flask-hello-world .
+      - docker tag flask-hello-world:latest 019562922826.dkr.ecr.eu-west-1.amazonaws.com/flask-hello-world:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 019562922826.dkr.ecr.eu-west-1.amazonaws.com/0margrj-apps/flask-hello-world:latest
+      - docker push 019562922826.dkr.ecr.eu-west-1.amazonaws.com/flask-hello-world:latest
